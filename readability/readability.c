@@ -21,12 +21,27 @@ int count_words(string text)
 {
     int sum = 0;
 
-    return sum;
+    for (int i = 0; i < strlen(text); i++) {
+        if (isspace(text[i]) != 0)
+        {
+            sum++;
+        }
+    }
+
+
+    return sum++;
 }
 
 int count_sentences(string text)
 {
     int sum = 0;
+
+    for (int i = 0; i < strlen(text); i++) {
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+        {
+            sum++;
+        }
+    }
 
     return sum;
 }
@@ -44,12 +59,14 @@ int main(void)
     sentence = count_sentences(text);
 
     printf("letters: %d\n", letter);
+    printf("words: %d\n", word);
+    printf("sentences: %d\n", sentence);
 
     int L = letter / word * 100;
     int S = sentence / word * 100;
 
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
-    printf("Grade: %d/n", index);
+    printf("Grade: %d\n", index);
 }
 

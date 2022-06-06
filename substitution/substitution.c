@@ -20,9 +20,13 @@ int main(int argc, string argv[])
     bool isValid = valid_key(argv[0]);
 
     printf("argv[0] = %s\n", argv[1]);
-    printf("sizeof = %d\n", sizeof(argv))
+    printf("sizeof = %d\n", argc);
 
-    if (argc != 1 || argv[0] == NULL)
+    if (argc != 1)
+    {
+        printf("Usage: ./substitution key\n");
+    }
+    else if (argv[0] == NULL)
     {
         printf("Usage: ./substitution key\n");
     }

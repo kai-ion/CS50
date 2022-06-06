@@ -4,7 +4,13 @@
 int count_letters(string text)
 {
     int sum = 0;
-    char str[] = text;
+
+    int n = 0;
+    while (text[n] != '\0')
+    {
+        if (text[n])
+        n++
+    }
 
     return sum;
 }

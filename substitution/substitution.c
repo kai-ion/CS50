@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 
+
+bool valid_key(string str) {
+    
+}
+
 int main(int argc, string argv[])
 {
     if (strlen(argv[0]) != 26)

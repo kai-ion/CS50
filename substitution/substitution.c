@@ -34,8 +34,8 @@ string cipher_text(string str, string key) {
         {
             pos = toupper(str[i]) - 65;
             cipher[i] = key[pos];
-            printf("pos: %d\n", pos);
-            printf("key[pos]: %hhd\n", key[pos]);
+            //printf("pos: %d\n", pos);
+            //printf("key[pos]: %c\n", key[pos]);
         }
         else
         {
@@ -50,7 +50,7 @@ int main(int argc, string argv[])
 {
     bool isValid = valid_key(argv[1]);
 
-    printf("argv[1] = %s\n", argv[1]);
+    //printf("argv[1] = %s\n", argv[1]);
 
     if (argc != 2)
     {

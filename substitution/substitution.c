@@ -19,8 +19,9 @@ int main(int argc, string argv[])
 {
     bool isValid = valid_key(argv[0]);
 
+    printf("argv[0] = %s\n", argv[0]);
 
-    if (argc != 1)
+    if (argc != 1 || strlen(argv[0]) == 0)
     {
         printf("Usage: ./substitution key\n");
     }

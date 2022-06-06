@@ -5,11 +5,8 @@ int count_letters(string text)
 {
     int sum = 0;
 
-    int n = 0;
-    while (text[n] != '\0')
-    {
-        if (text[n])
-        n++
+    for (int i = 0; i < strlen(text); i++) {
+        if ()
     }
 
     return sum;

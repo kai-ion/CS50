@@ -4,6 +4,7 @@
 int count_letters(string text)
 {
     int sum = 0;
+    char str[] = text;
 
     return sum;
 }

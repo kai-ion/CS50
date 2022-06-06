@@ -3,7 +3,8 @@
 #include <string.h>
 #include <ctype.h>
 
-bool valid_key(string str) {
+bool valid_key(string str)
+{
 
     for (int i = 0; i < strlen(str); i++)
     {
@@ -23,7 +24,8 @@ bool valid_key(string str) {
     return true;
 }
 
-string cipher_text(string str, string key) {
+string cipher_text(string str, string key)
+{
 
     string cipher = str;
     int pos;
@@ -64,7 +66,7 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    
+
     bool isValid = valid_key(argv[1]);
 
     //printf("argv[1] = %s\n", argv[1]);

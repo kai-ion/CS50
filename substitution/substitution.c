@@ -32,8 +32,10 @@ string cipher_text(string str, string key) {
     {
         if (isalpha(str[i]))
         {
-            pos = cipher[i] - 64;
+            pos = toupper(str[i]) - 65;
             cipher[i] = key[pos];
+            printf("pos: %d\n", pos);
+            printf("key[pos]: %hhd\n", key[pos]);
         }
         else
         {

@@ -11,6 +11,7 @@ bool valid_key(string str) {
         {
             return false;
         }
+        for (int j = 0; j < )
     }
     return true;
 }

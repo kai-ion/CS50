@@ -2,12 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
-#include <set>
 
 using namespace std;
 
 bool valid_key(string str) {
-    set<int> s;
 
     for (int i = 0; i < strlen(str); i++)
     {

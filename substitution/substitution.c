@@ -24,7 +24,8 @@ bool valid_key(string str) {
 }
 
 string cipher_text(string str, string key) {
-    
+
+    for ()
 }
 
 int main(int argc, string argv[])

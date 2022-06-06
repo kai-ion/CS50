@@ -50,19 +50,15 @@ int main(void)
 {
     string text = get_string("Enter text\n");
 
-    int letter;
-    int word;
-    int sentence;
-
-    letter = count_letters(text);
-    word = count_words(text);
-    sentence = count_sentences(text);
+    int letter = count_letters(text);
+    int word = count_words(text);
+    int sentence = count_sentences(text);
 
     printf("letters: %d\n", letter);
     printf("words: %d\n", word);
     printf("sentences: %d\n", sentence);
 
-    double L = letter / word * 100;
+    float L = letter / word;
     double S = sentence / word * 100;
 
     printf("L: %f\n", L);

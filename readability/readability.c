@@ -55,21 +55,24 @@ int main(void)
     double word = count_words(text);
     double sentence = count_sentences(text);
 
-    printf("letters: %f\n", letter);
-    printf("words: %f\n", word);
-    printf("sentences: %f\n", sentence);
+    //printf("letters: %f\n", letter);
+    //printf("words: %f\n", word);
+    //printf("sentences: %f\n", sentence);
 
     double L = letter / word * 100;
     double S = sentence / word * 100;
 
-    printf("L: %f\n", L);
-    printf("S: %f\n", S);
+    //printf("L: %f\n", L);
+    //printf("S: %f\n", S);
 
     double index = 0.0588 * L - 0.296 * S - 15.8;
-    printf("Index: %f\n", index);
+    //printf("Index: %f\n", index);
 
     if ( index < 1) {
         printf("Before Grade 1\n");
+    }
+    else if (index > 16) {
+        printf("Grade 16+\n");
     }
     else
     {

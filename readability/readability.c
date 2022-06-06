@@ -1,14 +1,14 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int count_letters(string text)
 {
     int sum = 0;
 
     for (int i = 0; i < strlen(text); i++) {
-        int n = isalpha(text[i]);
-        if (n != 0)
+        if (isalpha(text[i]) != 0)
         {
             sum++;
         }
@@ -42,6 +42,8 @@ int main(void)
     letter = count_letters(text);
     word = count_words(text);
     sentence = count_sentences(text);
+
+    printf("letters: %d\n", letter);
 
     int L = letter / word * 100;
     int S = sentence / word * 100;

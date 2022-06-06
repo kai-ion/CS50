@@ -11,13 +11,14 @@ bool valid_key(string str) {
         {
             return false;
         }
+        /**
         for (int j = i + 1; j < strlen(str); j++)
         {
             if (tolower(str[i]) == tolower(str[j]))
             {
                 return false;
             }
-        }
+        }**/
     }
     return true;
 }
@@ -33,7 +34,7 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    else if (strlen(argv[0]) != 26 || !isValid)
+    else if (strlen(argv[1]) != 26 || !isValid)
     {
         printf("Key must contain 26 characters.\n");
         return 1;

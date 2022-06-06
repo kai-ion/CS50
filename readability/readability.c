@@ -29,7 +29,7 @@ int count_words(string text)
     }
 
 
-    return sum++;
+    return ++sum;
 }
 
 int count_sentences(string text)
@@ -65,8 +65,16 @@ int main(void)
     int L = letter / word * 100;
     int S = sentence / word * 100;
 
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    double index = 0.0588 * L - 0.296 * S - 15.8;
+    printf("Index: %f\n", index);
 
-    printf("Grade: %d\n", index);
+    if ( index < 1) {
+        printf("Before Grade 1\n");
+    }
+    else
+    {
+        printf("Grade: %f\n", index);
+    }
+
 }
 

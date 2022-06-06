@@ -20,6 +20,7 @@ int main(int argc, string argv[])
     bool isValid = valid_key(argv[0]);
 
     printf("argv[0] = %s\n", argv[1]);
+    printf("sizeof = %d\n", sizeof(argv))
 
     if (argc != 1 || argv[0] == NULL)
     {

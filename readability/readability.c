@@ -7,7 +7,8 @@ int count_letters(string text)
     int sum = 0;
 
     for (int i = 0; i < strlen(text); i++) {
-        if (isalpha(text[i]))
+        int n = isalpha(text[i]);
+        if (n != 0)
         {
             sum++;
         }

@@ -57,16 +57,19 @@ string cipher_text(string str, string key) {
 
 int main(int argc, string argv[])
 {
-    bool isValid = valid_key(argv[1]);
 
-    //printf("argv[1] = %s\n", argv[1]);
 
     if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
         return 1;
     }
-    else if (strlen(argv[1]) != 26 || !isValid)
+    
+    bool isValid = valid_key(argv[1]);
+
+    //printf("argv[1] = %s\n", argv[1]);
+
+    if (strlen(argv[1]) != 26 || !isValid)
     {
         printf("Key must contain 26 characters.\n");
         return 1;

@@ -42,5 +42,10 @@ int main(int argc, string argv[])
 
     string text = get_string("plaintext: ");
 
-    printf("ciphertext: ");
+    string cipher = text;
+
+    printf("ciphertext: %s", cipher);
+
+    printf("\n");
+    return 0;
 }

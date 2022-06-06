@@ -3,7 +3,15 @@
 
 int main(void)
 {
-    int text = get_string("Enter a height between 1 - 8\n");
+    int text = get_string("Enter text\n");
+
+    int l = count_letters(text);
+    int w = count_words(text);
+    int s = count_sentences(text);
+
+    int index = 0.0588 * L - 0.296 * S - 15.8;
+
+    printf("Grade: %d/n", index);
 }
 
 int count_letters(string text) {

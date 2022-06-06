@@ -11,7 +11,13 @@ bool valid_key(string str) {
         {
             return false;
         }
-        for (int j = 0; j < )
+        for (int j = i + 1; j < strlen(str); j++)
+        {
+            if (tolower(str[i]) == tolower(str[j]))
+            {
+                return false;
+            }
+        }
     }
     return true;
 }

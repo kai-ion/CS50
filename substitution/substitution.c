@@ -17,7 +17,7 @@ bool valid_key(string str) {
 
 int main(int argc, string argv[])
 {
-    bool isValid = valid_key(argv[0]);
+    bool isValid = valid_key(argv[1]);
 
     printf("argv[1] = %s\n", argv[1]);
 

@@ -1,12 +1,16 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int count_letters(string text)
 {
     int sum = 0;
 
     for (int i = 0; i < strlen(text); i++) {
-        if ()
+        if (isalpha(text[i]))
+        {
+            sum++;
+        }
     }
 
     return sum;

@@ -26,12 +26,14 @@ bool valid_key(string str) {
 string cipher_text(string str, string key) {
 
     string cipher = str;
+    int pos;
 
     for (int i = 0; i < strlen(str); i++)
     {
         if (isalpha(str[i]))
         {
-            cipher[i] = 'a';
+            pos = cipher[i] - 64;
+            cipher[i] = key[pos];
         }
         else
         {

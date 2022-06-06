@@ -25,10 +25,12 @@ int main(int argc, string argv[])
     if (argc != 1)
     {
         printf("Usage: ./substitution key\n");
+        return 1;
     }
-    else if (argv[0] == '\0')
+    else if (argc == 0)
     {
         printf("Usage: ./substitution key\n");
+
     }
     else if (strlen(argv[0]) != 26 || !isValid)
     {

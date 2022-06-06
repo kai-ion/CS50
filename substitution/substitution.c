@@ -33,7 +33,16 @@ string cipher_text(string str, string key) {
         if (isalpha(str[i]))
         {
             pos = toupper(str[i]) - 65;
-            cipher[i] = key[pos];
+
+            if (isupper(str[i]))
+            {
+                cipher[i] = toupper(key[pos]);
+            }
+            else
+            {
+                cipher[i] = tolower(key[pos]);
+            }
+
             //printf("pos: %d\n", pos);
             //printf("key[pos]: %c\n", key[pos]);
         }

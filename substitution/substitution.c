@@ -25,7 +25,21 @@ bool valid_key(string str) {
 
 string cipher_text(string str, string key) {
 
-    for ()
+    string cipher = str;
+
+    for (int i = 0; i < strlen(str); i++)
+    {
+        if (isalpha(str[i]))
+        {
+            cipher[i] = 'a';
+        }
+        else
+        {
+            cipher[i] = str[i];
+        }
+    }
+
+    return cipher;
 }
 
 int main(int argc, string argv[])
@@ -47,7 +61,7 @@ int main(int argc, string argv[])
 
     string text = get_string("plaintext: ");
 
-    string cipher = text;
+    string cipher = cipher_text(text, argv[1]);
 
     printf("ciphertext: %s", cipher);
 

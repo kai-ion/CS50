@@ -65,6 +65,9 @@ int main(void)
     double L = letter / word * 100;
     double S = sentence / word * 100;
 
+    printf("L: %f\n", L);
+    printf("S: %f\n", S);
+
     double index = 0.0588 * L - 0.296 * S - 15.8;
     printf("Index: %f\n", index);
 

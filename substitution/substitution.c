@@ -23,6 +23,10 @@ bool valid_key(string str) {
     return true;
 }
 
+string cipher_text(string str, string key) {
+    
+}
+
 int main(int argc, string argv[])
 {
     bool isValid = valid_key(argv[1]);

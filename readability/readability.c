@@ -76,7 +76,7 @@ int main(void)
     }
     else
     {
-        printf("Grade: %.0f\n", round(index));
+        printf("Grade %.0f\n", round(index));
     }
 
 }

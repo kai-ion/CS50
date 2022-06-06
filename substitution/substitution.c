@@ -21,7 +21,7 @@ int main(int argc, string argv[])
 
     printf("argv[0] = %s\n", argv[1]);
 
-    if (argc != 1 || argv[0] == null)
+    if (argc != 1 || argv[0] == NULL)
     {
         printf("Usage: ./substitution key\n");
     }

@@ -3,11 +3,14 @@
 
 int main(void)
 {
-    int text = get_string("Enter text\n");
+    string text = get_string("Enter text\n");
 
-    int l = count_letters(text);
-    int w = count_words(text);
-    int s = count_sentences(text);
+    int letter = count_letters(text);
+    int word = count_words(text);
+    int sentence = count_sentences(text);
+
+    int l = letter / word * 100;
+    int s = sentece / word * 100;
 
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
@@ -15,13 +18,19 @@ int main(void)
 }
 
 int count_letters(string text) {
+    int sum = 0
 
+    return sum;
 }
 
 int count_words(string text) {
+    int sum = 0
 
+    return sum;
 }
 
 int count_sentences(string text) {
+    int sum = 0
 
+    return sum;
 }

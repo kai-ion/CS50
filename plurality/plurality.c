@@ -61,16 +61,23 @@ int main(int argc, string argv[])
 
     // Display winner of election
     print_winner();
+
+    return 0;
 }
 
 // Update vote totals given a new vote
 bool vote(string name)
 {
     // TODO
-    int pos;
     for (int i = 0; i < candidate_count; i++) {
-        
+        if (strcmp(candidate[i].name, name))
+        {
+            candidate[i].votes += 1;
+            return true;
+        }
     }
+
+
     return false;
 }
 
@@ -78,5 +85,16 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    int max = -1;
+    int maxPos = -1;
+    for (int i = 0; i < candidate_count; i++) {
+        if (candidate[i].votes > max)
+        {
+            max = candidate[i].votes;
+            maxPos = i;
+        }
+    }
+
+    printf("")
     return;
 }

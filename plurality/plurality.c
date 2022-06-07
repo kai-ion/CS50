@@ -103,7 +103,7 @@ void print_winner(void)
         }
     }
 
-    printf(max);
+    printf("max: %d\n",max);
 
     return;
 }

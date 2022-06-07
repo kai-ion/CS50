@@ -69,7 +69,8 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    for (int i = 0; i < candidate_count; i++) {
+    for (int i = 0; i < candidate_count; i++)
+    {
         if (strcmp(candidates[i].name, name) == 0)
         {
             candidates[i].votes += 1;
@@ -96,7 +97,8 @@ void print_winner(void)
         }
     }
 
-    for (int i = 0; i < candidate_count; i++) {
+    for (int i = 0; i < candidate_count; i++)
+    {
         if (candidates[i].votes == max)
         {
             printf("%s\n", candidates[i].name);

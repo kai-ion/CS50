@@ -41,7 +41,8 @@ int compute_score(string word)
 
     for (int i = 0; i < strlen(word); i++)
     {
-        if (isalpha(word[i])) {
+        if (isalpha(word[i]))
+        {
             pos = toupper(word[i]) - 65;
             points += POINTS[pos];
         }

@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 // Max number of candidates
 #define MAX 9
@@ -85,6 +86,15 @@ int main(int argc, string argv[])
         }
 
         record_preferences(ranks);
+        /**
+        for (int ii = 0; ii < candidate_count; ii++)
+        {
+            printf("\n");
+            for (int jj = 0; jj < candidate_count; jj++)
+            {
+                printf("%d ", preferences[ii][jj]);
+            }
+        }*/
 
         printf("\n");
     }
@@ -105,6 +115,7 @@ bool vote(int rank, string name, int ranks[])
         if (strcmp(candidates[i], name) == 0)
         {
             ranks[rank] = i;
+            return true;
         }
     }
     return false;
@@ -114,6 +125,13 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            preferences[ranks[i]][ranks[j]] += 1;
+        }
+    }
     return;
 }
 
@@ -121,13 +139,53 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
+    for (int i = 0; i < candidate_count - 1; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            if (preferences[i][j] > preferences[j][i])
+            {
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
+                pair_count++;
+            }
+            else if (preferences[i][j] < preferences[j][i])
+            {
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
+                pair_count++;
+            }
+        }
+    }
     return;
 }
+
 
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
     // TODO
+    int i, j, x, y;
+    pair temp[0];
+    for (i = 0; i < pair_count - 1; i++)
+
+        // Last i elements are already in place
+        for (j = 0; j <  pair_count - i - 1; j++)
+        {
+            x = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
+            y = preferences[pairs[j + 1].winner][pairs[j + 1].loser] - preferences[pairs[j + 1].loser][pairs[j + 1].winner];
+            if (x > y)
+            {
+                temp[0] = pairs[j];
+                pairs[j] = pairs[j + 1];
+                pairs[j + 1] = temp[0];
+            }
+        }
+    /**
+    for (int k = 0; k < pair_count; k++)
+    {
+    printf("Pairs: %d, %d\n", pairs[k].winner, pairs[k].loser);
+    }*/
     return;
 }
 
@@ -135,12 +193,54 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
+    for (int i = 0; i < pair_count; i++)
+    {
+        locked[pairs[i].winner][pairs[i].loser] = true;
+    }
+    /**
+    for (int ii = 0; ii < candidate_count; ii++)
+    {
+        printf("\n");
+        for (int jj = 0; jj < candidate_count; jj++)
+        {
+            printf("%d ", locked[ii][jj]);
+        }
+    }**/
     return;
 }
 
 // Print the winner of the election
-void print_winner(void)
+void print_winner()
 {
     // TODO
+//    printf("\nWinner\n");
+    int maxEdge = 0;
+    int winner = -1;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        int currEdge = 0;
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[i][j] == true)
+            {
+                currEdge++;
+            }
+        }
+
+        if (currEdge > maxEdge)
+        {
+            maxEdge = currEdge;
+            winner = i;
+        }
+        //printf("%d\n", currEdge);
+//       printf("%d\n", winner);
+    }
+
+//    if (winner != -1)
+//{
+    printf("%s\n", candidates[winner]);
+//    }
     return;
 }
+
+

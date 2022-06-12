@@ -244,7 +244,7 @@ void print_winner()
         int currEdge = 0;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (locked[j][i] == true)
+            if (locked[i][j] == true)
             {
                 currEdge++;
             }

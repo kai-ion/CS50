@@ -181,11 +181,11 @@ void sort_pairs(void)
                 pairs[j + 1] = temp[0];
             }
         }
-    /**
+
     for (int k = 0; k < pair_count; k++)
     {
     printf("Pairs: %d, %d\n", pairs[k].winner, pairs[k].loser);
-    }*/
+    }
     return;
 }
 

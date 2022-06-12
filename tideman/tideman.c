@@ -166,7 +166,6 @@ void sort_pairs(void)
 {
     // TODO
     int i, j, x, y;
-    pair temp[0];
     for (i = 0; i < pair_count - 1; i++)
 
         // Last i elements are already in place
@@ -176,9 +175,9 @@ void sort_pairs(void)
             y = preferences[pairs[j + 1].winner][pairs[j + 1].loser] - preferences[pairs[j + 1].loser][pairs[j + 1].winner];
             if (x > y)
             {
-                temp[0] = pairs[j];
+                pair temp = pairs[j];
                 pairs[j] = pairs[j + 1];
-                pairs[j + 1] = temp[0];
+                pairs[j + 1] = temp;
             }
         }
 

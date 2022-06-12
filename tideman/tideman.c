@@ -165,10 +165,10 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    for (int i = 0; i < pair_count; i++)
+    for (int i = pair_count - 1; i >= 0; i++)
 
         // Last i elements are already in place
-        for (int j = i + 1; j <  pair_count; j++)
+        for (int j = 0; j <= i - 1; j++)
         {
             int x = preferences[pairs[j].winner][pairs[j].loser];
             int y = preferences[pairs[j + 1].winner][pairs[j + 1].loser];

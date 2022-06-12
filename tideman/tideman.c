@@ -165,10 +165,10 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    for (int i = pair_count - 1; i >= 0; i++)
+    for (int i = pair_count - 1; i >= 0; i--)
 
         // Last i elements are already in place
-        for (int j = 0; j <= i - 1; j++)
+        for (int j = 0; j <= i; j++)
         {
             int x = preferences[pairs[j].winner][pairs[j].loser];
             int y = preferences[pairs[j + 1].winner][pairs[j + 1].loser];
@@ -179,11 +179,12 @@ void sort_pairs(void)
                 pairs[j + 1] = temp;
             }
         }
-
+    /**
     for (int k = 0; k < pair_count; k++)
     {
     printf("Pairs: %d, %d\n", pairs[k].winner, pairs[k].loser);
     }
+    */
     return;
 }
 

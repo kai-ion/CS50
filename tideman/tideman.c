@@ -172,7 +172,7 @@ void sort_pairs(void)
         {
             int x = preferences[pairs[j].winner][pairs[j].loser];
             int y = preferences[pairs[j + 1].winner][pairs[j + 1].loser];
-            if (x > y)
+            if (x < y)
             {
                 pair temp = pairs[j];
                 pairs[j] = pairs[j + 1];

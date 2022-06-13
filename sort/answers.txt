@@ -6,6 +6,6 @@ sort2 uses: Merge Sort
 
 How do you know?: Uses the least Run time for random list
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: Took two times more time to sort a sorted list than a bubble list

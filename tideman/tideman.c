@@ -244,16 +244,15 @@ void print_winner()
         int currEdge = 0;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (locked[i][j] == true)
+            if (locked[j][i] == false)
             {
                 currEdge++;
             }
         }
 
-        if (currEdge > maxEdge)
+        if (currEdge == candidate_count)
         {
-            maxEdge = currEdge;
-            winner = i;
+            printf("%s\n", candidates[i]);
         }
         //printf("%d\n", currEdge);
 //       printf("%d\n", winner);
@@ -261,7 +260,7 @@ void print_winner()
 
 //    if (winner != -1)
 //{
-    printf("%s\n", candidates[winner]);
+
 //    }
     return;
 }

@@ -34,7 +34,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //temp array to keep original pixel
-    
+    RGBTRIPLE temp = image;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -53,9 +53,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         break;
                     }
-                    redSum += image[i+k][j+l].rgbtRed;
-                    blueSum += image[i+k][j+l].rgbtBlue;
-                    greenSum += image[i+k][j+l].rgbtGreen;
+                    redSum += temp[i+k][j+l].rgbtRed;
+                    blueSum += temp[i+k][j+l].rgbtBlue;
+                    greenSum += temp[i+k][j+l].rgbtGreen;
                     n++;
                 }
             }

@@ -101,12 +101,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             float n = 0; //counter
-            float gxRedSum;
-            float gxBlueSum;
-            float gxGreenSum;
-            float gyRedSum;
-            float gyBlueSum;
-            float gyGreenSum;
+            float gxRedSum = 0;
+            float gxBlueSum = 0;
+            float gxGreenSum = 0;
+            float gyRedSum = 0;
+            float gyBlueSum = 0;
+            float gyGreenSum = 0;
 
             //loop through surround pixel
             for (int k = -1; k < 2; k++)
@@ -119,19 +119,36 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         n++;
                         continue;
                     }
-                    gxRedSum += (temp[i + k][j + l]) * (Gx[k + 1][l + 1]);
-                    gxBlueSum += (temp[i + k][j + l]) * (Gx[k + 1][l + 1]);
-                    gxGreenSum += (temp[i + k][j + l]) * (Gx[k + 1][l + 1]);
-                    gyRedSum += (temp[i + k][j + l]) * (Gy[k + 1][l + 1]);
-                    gyBlueSum += (temp[i + k][j + l]) * (Gy[k + 1][l + 1]);
-                    gyGreenSum += (temp[i + k][j + l]) * (Gy[k + 1][l + 1]);
+                    gxRedSum += (temp[i + k][j + l].rgbtRed) * (Gx[k + 1][l + 1]);
+                    gxBlueSum += (temp[i + k][j + l].rgbtBlue) * (Gx[k + 1][l + 1]);
+                    gxGreenSum += (temp[i + k][j + l].rgbtGreen) * (Gx[k + 1][l + 1]);
+                    gyRedSum += (temp[i + k][j + l].rgbtRed) * (Gy[k + 1][l + 1]);
+                    gyBlueSum += (temp[i + k][j + l].rgbtBlue) * (Gy[k + 1][l + 1]);
+                    gyGreenSum += (temp[i + k][j + l].rgbtGreen) * (Gy[k + 1][l + 1]);
                     n++;
                 }
             }
 
-            image[i][j].rgbtRed = round(redSum / n);
-            image[i][j].rgbtBlue = round(blueSum / n);
-            image[i][j].rgbtGreen = round(greenSum / n);
+            int red = round((sqrt(gxRedSum * gxRedSum + gyRedSum * gyRedSum)) / n);
+            int blue = round((sqrt(gxBlueSum * gxBlueSum + gyBlueSum * gyBlueSum)) / n);
+            int green = round((sqrt(gxGreenSum * gxGreenSum + gyGreenSum * gyGreenSum)) / n);
+
+            if (red > 255)
+            {
+                red = 255;
+            }
+            if (blue > 255)
+            {
+                blue = 255;
+            }
+            if (green > 255)
+            {
+                green = 255;
+            }
+
+            image[i][j].rgbtRed = red;
+            image[i][j].rgbtBlue = blue;
+            image[i][j].rgbtGreen = green;
         }
     }
 

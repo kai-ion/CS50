@@ -116,7 +116,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     //if its an edge pixel, set it to black(value 0);
                     if ((i + k) < 0 || (i + k) >= height || (j + l) < 0 || (j + l) >= width)
                     {
-                        n++;
                         continue;
                     }
                     gxRedSum += (temp[i + k][j + l].rgbtRed) * (Gx[k + 1][l + 1]);
@@ -129,9 +128,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            int red = round((sqrt(gxRedSum * gxRedSum + gyRedSum * gyRedSum)) / n);
-            int blue = round((sqrt(gxBlueSum * gxBlueSum + gyBlueSum * gyBlueSum)) / n);
-            int green = round((sqrt(gxGreenSum * gxGreenSum + gyGreenSum * gyGreenSum)) / n);
+            int red = round((sqrt(gxRedSum * gxRedSum + gyRedSum * gyRedSum)) );
+            int blue = round((sqrt(gxBlueSum * gxBlueSum + gyBlueSum * gyBlueSum)) );
+            int green = round((sqrt(gxGreenSum * gxGreenSum + gyGreenSum * gyGreenSum)) );
 
             if (red > 255)
             {

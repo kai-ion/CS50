@@ -32,15 +32,27 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    B
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-
+            BYTE redSum = 0;
+            BYTE blueSum = 0;
+            BYTE greenSum = 0;
+            //loop through surround pixels
             for (int k = -1; k < 2; k++)
             {
-                image[i][j].rgbtRed = image[i-1][j-1].rgbtRed
+                for (int l = -1; l < 2; l++)
+                {
+                    //check if row or column in range
+                    if ((i + k) < 0 || (i + k) >= height || (j + l) < 0 || (j + l) >= width)
+                    {
+                        break;
+                    }
+                    redSum = image[i+k][j+l].rgbtRed;
+                    blueSum = image[i+k][j+l].rgbtBlue;
+                    greenSum = image[i+k][j+l].rgbtGreen;
+                }
             }
         }
     }

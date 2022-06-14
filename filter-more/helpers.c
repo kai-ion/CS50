@@ -4,10 +4,11 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i <  height; i++) {
+    for (int i = 0; i <  height; i++)
+    {
         for (int j = 0; j < width; j++)
         {
-            BYTE avg = round((image[i][j].rgbtRed + image[i][j].rgbtBlue + image[i][j].rgbtGreen)/3.0);
+            BYTE avg = round((image[i][j].rgbtRed + image[i][j].rgbtBlue + image[i][j].rgbtGreen) / 3.0);
             image[i][j].rgbtRed = avg;
             image[i][j].rgbtBlue = avg;
             image[i][j].rgbtGreen = avg;
@@ -19,8 +20,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i <  height; i++) {
-        for (int j = 0; j < width/2; j++)
+    for (int i = 0; i <  height; i++)
+    {
+        for (int j = 0; j < width / 2; j++)
         {
             RGBTRIPLE temp = image[i][j];
             image[i][j] = image[i][width - 1 - j];
@@ -63,9 +65,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
-                    redSum += temp[i+k][j+l].rgbtRed;
-                    blueSum += temp[i+k][j+l].rgbtBlue;
-                    greenSum += temp[i+k][j+l].rgbtGreen;
+                    redSum += temp[i + k][j + l].rgbtRed;
+                    blueSum += temp[i + k][j + l].rgbtBlue;
+                    greenSum += temp[i + k][j + l].rgbtGreen;
                     n++;
                 }
             }
@@ -92,8 +94,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
 
     //set sobel coefficient
-    int Gx[3][3] = {{-1, 0, 1} ,{-2,0,2},{-1,0,1}};
-    int Gy[3][3] = {{-1,-2,-1},{0,0,0},{1,2,1}};
+    int Gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
+    int Gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
 
     //loop through each pixel rows by column
     for (int i = 0; i < height; i++)
@@ -128,9 +130,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            int red = round((sqrt(gxRedSum * gxRedSum + gyRedSum * gyRedSum)) );
-            int blue = round((sqrt(gxBlueSum * gxBlueSum + gyBlueSum * gyBlueSum)) );
-            int green = round((sqrt(gxGreenSum * gxGreenSum + gyGreenSum * gyGreenSum)) );
+            int red = round((sqrt(gxRedSum * gxRedSum + gyRedSum * gyRedSum)));
+            int blue = round((sqrt(gxBlueSum * gxBlueSum + gyBlueSum * gyBlueSum)));
+            int green = round((sqrt(gxGreenSum * gxGreenSum + gyGreenSum * gyGreenSum)));
 
             if (red > 255)
             {

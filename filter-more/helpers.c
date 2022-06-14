@@ -92,14 +92,42 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
 
     //set sobel coefficient
-    int Gx[3][3] = {-1, 0, 1} {-2,0,2}{-1,0,1};
+    int Gx[3][3] = {{-1, 0, 1} ,{-2,0,2},{-1,0,1}};
+    int Gy[3][3] = {{-1,-2,-1},{0,0,0},{1,2,1}};
 
-    //loop through each pixel
+    //loop through each pixel rows by column
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            float n = 0; //counter
+            float gxRedSum;
+            float gxBlueSum;
+            float gxGreenSum;
+            float gyRedSum;
+            float gyBlueSum;
+            float gyGreenSum;
 
+            //loop through surround pixel
+            for (int k = -1; k < 2; k++)
+            {
+                for (int l = -1; l < 2; l++)
+                {
+                    //if its an edge pixel, set it to black(value 0);
+                    if ((i + k) < 0 || (i + k) >= height || (j + l) < 0 || (j + l) >= width)
+                    {
+                        n++;
+                        continue;
+                    }
+                    gxRedSum += (temp[i + k][j + l]) * (Gx[k + 1][l + 1]);
+                    gxBlueSum += (temp[i + k][j + l]) * (Gx[k + 1][l + 1]);
+                    gxGreenSum += (temp[i + k][j + l]) * (Gx[k + 1][l + 1]);
+                    gyRedSum += (temp[i + k][j + l]) * (Gy[k + 1][l + 1]);
+                    gyBlueSum += (temp[i + k][j + l]) * (Gy[k + 1][l + 1]);
+                    gyGreenSum += (temp[i + k][j + l]) * (Gy[k + 1][l + 1]);
+                    n++;
+                }
+            }
         }
     }
 

@@ -61,7 +61,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     //check if row or column in range
                     if ((i + k) < 0 || (i + k) >= height || (j + l) < 0 || (j + l) >= width)
                     {
-                        break;
+                        continue;
                     }
                     redSum += temp[i+k][j+l].rgbtRed;
                     blueSum += temp[i+k][j+l].rgbtBlue;

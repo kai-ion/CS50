@@ -39,6 +39,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             BYTE redSum = 0;
             BYTE blueSum = 0;
             BYTE greenSum = 0;
+            BYTE n = 0;
             //loop through surround pixels
             for (int k = -1; k < 2; k++)
             {
@@ -52,8 +53,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     redSum = image[i+k][j+l].rgbtRed;
                     blueSum = image[i+k][j+l].rgbtBlue;
                     greenSum = image[i+k][j+l].rgbtGreen;
+                    n++;
                 }
             }
+            image[i][j].rgbtRed = redSum / n;
+            image[i][j].rgbtBlue = blueSum / n;
+            image[i][j].rgbtGreen = greenSum / n;
         }
     }
     return;

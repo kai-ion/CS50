@@ -80,5 +80,28 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    //duplicate image to keep original value for calculation
+    RGBTRIPLE temp[height][width];
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            temp[i][j] = image[i][j];
+        }
+    }
+
+    //set sobel coefficient
+    int Gx[3][3] = {-1, 0, 1} {-2,0,2}{-1,0,1};
+
+    //loop through each pixel
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+
+        }
+    }
+
     return;
 }

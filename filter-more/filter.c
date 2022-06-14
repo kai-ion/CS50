@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #include "helpers.h"
+#include <math.h>
 
 int main(int argc, char *argv[])
 {

@@ -36,10 +36,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            BYTE redSum = 0;
-            BYTE blueSum = 0;
-            BYTE greenSum = 0;
-            BYTE n = 0;
+            float redSum = 0;
+            float blueSum = 0;
+            float greenSum = 0;
+            float n = 0;
             //loop through surround pixels
             for (int k = -1; k < 2; k++)
             {

@@ -128,6 +128,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     n++;
                 }
             }
+
+            image[i][j].rgbtRed = round(redSum / n);
+            image[i][j].rgbtBlue = round(blueSum / n);
+            image[i][j].rgbtGreen = round(greenSum / n);
         }
     }
 

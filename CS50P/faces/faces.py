@@ -2,7 +2,7 @@ def convert(str):
     return str.replace(":)", "🙂").replace(":(","😐")
 
 def main() :
-    str = input("Enter a phrase: ")
+    str = input()
 
     print(convert(str))
 

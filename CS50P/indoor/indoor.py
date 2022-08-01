@@ -1,2 +1,3 @@
-str = input("Enter a phrase: ")
+str = input("Enter a phrase: ").lower()
 
+print(str)

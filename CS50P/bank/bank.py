@@ -3,5 +3,9 @@ def main() :
 
     if str == "Hello" :
         print("$0")
+    elif str[0] == 'h' :
+        print("$20")
+    else :
+        
 
 main()

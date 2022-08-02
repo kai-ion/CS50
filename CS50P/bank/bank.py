@@ -6,6 +6,6 @@ def main() :
     elif str[0] == 'h' :
         print("$20")
     else :
-        
+        print("100")
 
 main()

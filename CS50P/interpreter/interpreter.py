@@ -5,5 +5,7 @@ def main() :
     if '+' in y :
         print(float(x) + float(z))
     elif '-' in y :
-        print(float(x) + float(z))
+        print(float(x) - float(z))
+    elif '*' in y :
+        print(float(x) * float(z))
 main()

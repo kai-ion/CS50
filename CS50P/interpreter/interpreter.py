@@ -3,5 +3,5 @@ def main() :
     x, y, z = str.split(" ")
 
     if '+' in y :
-        print(float(x) + float(y))
+        print(float(x) + float(z))
 main()

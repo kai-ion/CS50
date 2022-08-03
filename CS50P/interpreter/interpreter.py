@@ -8,4 +8,6 @@ def main() :
         print(float(x) - float(z))
     elif '*' in y :
         print(float(x) * float(z))
+    elif '/' in y :
+        print(float(x) / float(z))
 main()

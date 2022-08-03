@@ -1,4 +1,5 @@
 def main():
+    str = input("What time is it? ")
     ...
 
 

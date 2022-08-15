@@ -1,5 +1,5 @@
 def main() :
-    num = int(input("Fraction: "))
+    num = get_int("Fraction: ")
 
     ...
 

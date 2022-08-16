@@ -1,5 +1,5 @@
 grocery = {
-    
+
 }
 
 def main() :
@@ -11,8 +11,8 @@ def get_int(prompt) :
     while True:
         try:
             item = input(prompt)
-            if item in menu :
-                total += menu[item]
+            if item in grocery :
+                grocery[]
 
                 print(f"Total: ${total:.2f}")
         except (EOFError):

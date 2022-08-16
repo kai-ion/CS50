@@ -20,7 +20,8 @@ def main() :
 def get_int(prompt) :
     while True:
         try:
-            item = input(prompt).lower()
+            date = input(prompt).lower()
+            year,
             if item in grocery :
                 grocery[item] = grocery[item] + 1
             else :

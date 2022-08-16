@@ -32,7 +32,12 @@ def get_int(prompt) :
                 for i in range(len(months)) :
                     if month2 == months[i] :
                         month = i
+
+                day = day.replace("," , "")
+                if int(month) >= 1 and int(month) <= 12 and int(day) >= 1 and int(day) <= 31:
+                    print(f"{year}-{months}-{day}")
             except:
+                print()
                 pass
 
 if __name__ == "__main__" :

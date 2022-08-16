@@ -19,7 +19,7 @@ def main() :
 
 def get_int(prompt) :
     while True:
-        date = input(prompt).lower()
+        date = input(prompt)
         try:
             month, day, year = date.split("/")
             if int(month) >= 1 and int(month) <= 12 and int(day) >= 1 and int(day) <= 31:
@@ -30,10 +30,10 @@ def get_int(prompt) :
 
                 for i in range(len(months)) :
                     if month2 == months[i] :
-                        month = i
+                        month = i + 1
 
                 day = day2.replace("," , "")
-                
+
                 if int(month) >= 1 and int(month) <= 12 and int(day) >= 1 and int(day) <= 31:
                     break
             except:

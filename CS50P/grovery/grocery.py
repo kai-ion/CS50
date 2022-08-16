@@ -1,5 +1,5 @@
 def main() :
-    get_int("Item: ")
+    get_int("")
 
     ...
 def get_int(prompt) :

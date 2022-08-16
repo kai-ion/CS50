@@ -19,7 +19,7 @@ def get_int(prompt) :
             print()
 
             for items in sorted(grocery.keys()) :
-                print(grocery[items], items)
+                print(grocery[items], items.upper())
             break
 
 

@@ -1,6 +1,6 @@
 def main() :
     num = get_int("Fraction: ")
-    newNum = num * 100
+    newNum = int(num * 100)
 
     if newNum <= 1 :
         print("E")

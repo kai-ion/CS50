@@ -24,7 +24,7 @@ def get_int(prompt) :
             year, months, day = date.split("/")
             print(f"{year}-{months}-{day}")
 
-        except (EOFError):
+        except:
             print()
             break
 

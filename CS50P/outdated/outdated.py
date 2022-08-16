@@ -38,7 +38,7 @@ def get_int(prompt) :
             except:
                 print()
                 pass
-    print(f"{year}-{month}-{day}")
+    print(f"{year}-{int(month):02}-{int(day):02}")
 
 if __name__ == "__main__" :
     main()

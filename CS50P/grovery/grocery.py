@@ -9,7 +9,7 @@ def main() :
 def get_int(prompt) :
     while True:
         try:
-            item = input(prompt).upper()
+            item = input(prompt).lower()
             if item in grocery :
                 grocery[item] = grocery[item] + 1
             else :
@@ -18,7 +18,7 @@ def get_int(prompt) :
         except (EOFError):
             print()
 
-            for items in sorted(grocery) :
+            for items in sorted(grocery.keys()) :
                 print(grocery[items], items)
             break
 

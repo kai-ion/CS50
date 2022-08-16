@@ -23,7 +23,7 @@ def get_int(prompt) :
             if item in menu :
                 total += menu[item]
 
-                print(f"Total: $")
+                print(f"Total: ${total:.2f}")
         except (EOFError):
             print()
             break

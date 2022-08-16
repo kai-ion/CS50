@@ -1,4 +1,4 @@
-month = [
+months = [
     "January",
     "February",
     "March",
@@ -21,13 +21,19 @@ def get_int(prompt) :
     while True:
         date = input(prompt).lower()
         try:
-            year, months, day = date.split("/")
-            if int(months) >= 1 and int(months) <= 12 and int(day) >= 1 and int(day) <= 31:
+            year, month, day = date.split("/")
+            if int(month) >= 1 and int(month) <= 12 and int(day) >= 1 and int(day) <= 31:
                 print(f"{year}-{months}-{day}")
 
         except:
-            month2, day2, year = date.split(" ")
-            break
+            try:
+                month2, day2, year2 = date.split(" ")
+
+                for i in range(len(months)) :
+                    if month2 == months[i] :
+                        month = i
+            except:
+                pass
 
 if __name__ == "__main__" :
     main()

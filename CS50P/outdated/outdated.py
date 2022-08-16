@@ -28,13 +28,13 @@ def get_int(prompt) :
 
         except:
             try:
-                month2, day2, year2 = date.split(" ")
+                month2, day2, year = date.split(" ")
 
                 for i in range(len(months)) :
                     if month2 == months[i] :
                         month = i
 
-                day = day.replace("," , "")
+                day = day2.replace("," , "")
                 if int(month) >= 1 and int(month) <= 12 and int(day) >= 1 and int(day) <= 31:
                     print(f"{year}-{int(month):02}-{int(day):02}")
                     break

@@ -23,7 +23,7 @@ def get_int(prompt) :
         try:
             year, month, day = date.split("/")
             if int(month) >= 1 and int(month) <= 12 and int(day) >= 1 and int(day) <= 31:
-                print(f"{year}-{months}-{day}")
+
                 break
 
         except:
@@ -36,11 +36,12 @@ def get_int(prompt) :
 
                 day = day2.replace("," , "")
                 if int(month) >= 1 and int(month) <= 12 and int(day) >= 1 and int(day) <= 31:
-                    print(f"{year}-{int(month):02}-{int(day):02}")
+                    
                     break
             except:
                 print()
                 pass
+    print(f"{year}-{months}-{day}")
 
 if __name__ == "__main__" :
     main()

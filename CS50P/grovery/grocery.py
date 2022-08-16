@@ -12,7 +12,9 @@ def get_int(prompt) :
         try:
             item = input(prompt)
             if item in grocery :
-                grocery[]
+                grocery[item] = grocery[item] + 1
+            else :
+                grocery[item] = 1
 
                 print(f"Total: ${total:.2f}")
         except (EOFError):

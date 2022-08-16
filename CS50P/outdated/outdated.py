@@ -26,7 +26,7 @@ def get_int(prompt) :
                 print(f"{year}-{months}-{day}")
 
         except:
-            print()
+            month2, day2, year = date.split(" ")
             break
 
 if __name__ == "__main__" :

@@ -1,3 +1,7 @@
+grocery = {
+    
+}
+
 def main() :
     get_int("")
 
@@ -6,7 +10,7 @@ def get_int(prompt) :
     total = 0
     while True:
         try:
-            item = input(prompt).title()
+            item = input(prompt)
             if item in menu :
                 total += menu[item]
 

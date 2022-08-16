@@ -9,7 +9,7 @@ def main() :
 def get_int(prompt) :
     while True:
         try:
-            item = input(prompt)
+            item = input(prompt).capita
             if item in grocery :
                 grocery[item] = grocery[item] + 1
             else :

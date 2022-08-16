@@ -25,7 +25,7 @@ def main() :
 def get_int(prompt) :
     while True:
         try:
-            fuel = input(prompt)
+            item = input(prompt).title()
             numerator, denominator = fuel.split("/")
             newNum = int(numerator)
             newDen = int (denominator)

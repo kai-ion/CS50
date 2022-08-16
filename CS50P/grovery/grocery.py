@@ -7,7 +7,6 @@ def main() :
 
     ...
 def get_int(prompt) :
-    total = 0
     while True:
         try:
             item = input(prompt)
@@ -16,9 +15,9 @@ def get_int(prompt) :
             else :
                 grocery[item] = 1
 
-                print(f"Total: ${total:.2f}")
         except (EOFError):
             print()
+            print(grocery)
             break
 
 

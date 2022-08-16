@@ -22,16 +22,10 @@ def get_int(prompt) :
         try:
             date = input(prompt).lower()
             year, months, day = date.split("/")
-            if item in grocery :
-                grocery[item] = grocery[item] + 1
-            else :
-                grocery[item] = 1
+            print(f"{year}, {months}, {day}")
 
         except (EOFError):
             print()
-
-            for items in sorted(grocery.keys()) :
-                print(grocery[items], items.upper())
             break
 
 if __name__ == "__main__" :

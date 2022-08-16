@@ -11,29 +11,22 @@ menu = {
 }
 
 def main() :
-    num = get_int("Item: ")
-    newNum = round(num * 100)
+    get_int("Item: ")
 
-    if newNum <= 1 :
-        print("E")
-    elif newNum >= 99:
-        print("F")
-    else :
-        print(f"{newNum}%")
     ...
 
 def get_int(prompt) :
+    total = 0
     while True:
         try:
             item = input(prompt).title()
-            numerator, denominator = fuel.split("/")
-            newNum = int(numerator)
-            newDen = int (denominator)
-            f = newNum / newDen
-            if f <= 1:
-                return f
-        except (ValueError, ZeroDivisionError):
-            pass
+            if item in menu :
+                total += menu[item]
+
+                print(f"Total: $")
+        except (EOFError):
+            print()
+            break
 
 
 if __name__ == "__main__" :

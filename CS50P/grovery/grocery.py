@@ -17,7 +17,8 @@ def get_int(prompt) :
 
         except (EOFError):
             print()
-            for items in grocery :
+
+            for items in sorted(grocery) :
                 print(grocery[items], items)
             break
 

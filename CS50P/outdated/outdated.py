@@ -19,8 +19,8 @@ def main() :
 
 def get_int(prompt) :
     while True:
+        date = input(prompt).lower()
         try:
-            date = input(prompt).lower()
             year, months, day = date.split("/")
             print(f"{year}-{months}-{day}")
 

@@ -17,6 +17,8 @@ def main() :
         fonts = random.choice(figlet.getFonts())
         figlet.setFont(font = fonts)
         ...
+    else :
+        sys.exit("Invalid Usage")
     ...
 
     msg = input("Input: ")

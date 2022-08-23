@@ -19,5 +19,11 @@ def main() :
         ...
     ...
 
+    msg = input("Input: ")
+
+    print("Output: ")
+
+    print(figlet.renderText(msg))
+
 if __name__ == "__main__" :
     main()

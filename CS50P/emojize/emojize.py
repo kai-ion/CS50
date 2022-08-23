@@ -3,7 +3,9 @@ import emoji
 def main() :
     str = input("Input: ")
 
-    output = 
+    output = emoji.emojize(str)
+
+    print(f"Output: {output}")
 
     ...
 

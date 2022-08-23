@@ -1,3 +1,6 @@
+from pyfiglet import Figlet
+import sys
+
 def main() :
     ...
 

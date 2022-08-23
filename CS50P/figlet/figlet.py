@@ -12,7 +12,9 @@ def main() :
 
         except :
             sys.exit("Invalid Usage")
-            ...
+    elif len(sys.argv) == 1 :
+        figlet.setFont()
+        ...
     ...
 
 if __name__ == "__main__" :

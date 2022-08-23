@@ -14,8 +14,8 @@ def main() :
         except :
             sys.exit("Invalid Usage")
     elif len(sys.argv) == 1 :
-        font = random.choice(figlet.getFonts())
-        figlet.setFont()
+        fonts = random.choice(figlet.getFonts())
+        figlet.setFont(font = fonts)
         ...
     ...
 

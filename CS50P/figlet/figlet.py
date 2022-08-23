@@ -1,5 +1,6 @@
 from pyfiglet import Figlet
 import sys
+import random
 
 def main() :
     figlet = Figlet()
@@ -13,6 +14,7 @@ def main() :
         except :
             sys.exit("Invalid Usage")
     elif len(sys.argv) == 1 :
+        font = random.choice(figlet.getFonts())
         figlet.setFont()
         ...
     ...

@@ -1,9 +1,17 @@
 import inflect
 
 def main() :
-    try :
-        name = input("Name: ")
-        output = inflect.join(name)
+    output = ["Liesl"]
+    while True:
+        try :
+            name = input("Name: ")
+            output = inflect.join(name)
+        except EOFError:
+            print()
+            break
+
+    print(f"Adieu, adieu, to ")
+
     ...
 
 if __name__ == "__main__" :

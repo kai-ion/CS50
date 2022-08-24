@@ -1,11 +1,13 @@
 import inflect
 
+p = inflect.engine()
+
 def main() :
     output = "Liesl"
     while True:
         try :
             name = input("Name: ")
-            output = inflect.join(name)
+            output = p.join(name)
         except EOFError:
             print()
             break

@@ -11,6 +11,8 @@ def main():
             try :
                 x = generate_integer(lvl)
                 y = generate_integer(lvl)
+
+                ans = input("")
             except ValueError:
                 pass
     ...

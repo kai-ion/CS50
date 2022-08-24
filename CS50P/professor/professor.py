@@ -12,7 +12,10 @@ def main():
                 x = generate_integer(lvl)
                 y = generate_integer(lvl)
 
-                ans = input("")
+                ans = input(f"{x} + {y} = ")
+
+                counter = 0
+                
             except ValueError:
                 pass
     ...

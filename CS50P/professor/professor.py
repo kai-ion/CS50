@@ -6,8 +6,13 @@ def main():
 
     score = 0
     for i in range(10) :
-        x = generate_integer(lvl)
-        y = generate_integer(lvl)
+
+        while True:
+            try :
+                x = generate_integer(lvl)
+                y = generate_integer(lvl)
+            except ValueError:
+                pass
     ...
 
 

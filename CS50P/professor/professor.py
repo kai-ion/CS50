@@ -6,7 +6,6 @@ def main():
 
     score = 0
     for i in range(10) :
-        while True:
             try :
                 x = generate_integer(lvl)
                 y = generate_integer(lvl)

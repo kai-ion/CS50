@@ -7,9 +7,15 @@ def main():
 
 
 def get_level():
-    num = int(input("Level: "))
+    while True :
+        try :
+            num = int(input("Level: "))
 
-    while ()
+            if num in [1,2,3] :
+                return num
+            ...
+        except ValueError :
+            pass
     ...
 
 

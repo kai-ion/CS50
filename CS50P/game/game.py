@@ -1,4 +1,6 @@
 import random
+import sys
+
 def main() :
     while True:
         try :
@@ -12,9 +14,20 @@ def main() :
 
             if guess < 1 :
                 continue
-            
+
+            if guess < randNum :
+                print("Too small!")
+                continue
+            elif guess > randNum :
+                print("Too large!")
+                continue
+            else :
+                sys.exit("Just right!")
+
         except ValueError:
             pass
+
+
 
     ...
 

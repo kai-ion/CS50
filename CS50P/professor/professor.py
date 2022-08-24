@@ -12,10 +12,9 @@ def main():
                 x = generate_integer(lvl)
                 y = generate_integer(lvl)
 
-                ans = input(f"{x} + {y} = ")
-
                 counter = 0
                 while counter < 3 :
+                    ans = input(f"{x} + {y} = ")
                     if ans != x + y :
                         print("EEE")
                         counter += 1

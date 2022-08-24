@@ -19,6 +19,7 @@ def main():
                         print("EEE")
                         counter += 1
                     elif ans == x + y :
+                        print(f"{x} + {y} = {x + y}")
                         score += 1
                         break
 

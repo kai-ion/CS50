@@ -13,14 +13,15 @@ def main():
 
                 counter = 0
                 while counter < 3 :
-                    ans = (f"{x} + {y} = ")
+                    ans = input(f"{x} + {y} = ")
                     if int(ans) != x + y :
                         print("EEE")
                         counter += 1
                     elif int(ans) == x + y :
-                        print(f"{x} + {y} = {x + y}")
                         score += 1
                         break
+                if counter == 3 :
+                    print(f"{x} + {y} = {x + y}")
 
 
             except ValueError:

@@ -18,7 +18,9 @@ def main():
                 while counter < 3 :
                     if ans != x + y :
                         print("EEE")
-                        counter++
+                        counter += 1
+                    else :
+                        break
 
 
             except ValueError:

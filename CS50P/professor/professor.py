@@ -8,6 +8,8 @@ def main():
 
 def get_level():
     num = int(input("Level: "))
+
+    while ()
     ...
 
 

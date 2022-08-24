@@ -14,8 +14,10 @@ def main():
 
                 ans = input(f"{x} + {y} = ")
 
+                if ans != x + y :
+                    
                 counter = 0
-                
+
             except ValueError:
                 pass
     ...

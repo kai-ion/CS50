@@ -7,12 +7,12 @@ def main() :
     while True:
         try :
             name = input("Name: ")
+            nameList.append(name)
 
-            output = p.join(nameList)
 
         except EOFError:
             print()
-            nameList.append(name)
+            output = p.join(nameList)
             break
 
     print(f"Adieu, adieu, to {output}")

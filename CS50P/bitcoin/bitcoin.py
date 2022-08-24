@@ -5,6 +5,8 @@ def main() :
 
     if sys.argv < 2 :
         sys.exit("Missing command-line argument")
+
+    
     try:
         ...
     except requests.RequestException:

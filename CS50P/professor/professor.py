@@ -18,7 +18,7 @@ def main():
                     if ans != x + y :
                         print("EEE")
                         counter += 1
-                    else :
+                    elif ans == x + y :
                         score += 1
                         break
 

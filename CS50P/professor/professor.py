@@ -26,6 +26,7 @@ def main():
 
             except ValueError:
                 pass
+    print(f"Score: {score}")
     ...
 
 

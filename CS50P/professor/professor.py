@@ -4,8 +4,10 @@ import random
 def main():
     lvl = get_level()
 
-    x = generate_integer(lvl)
-    y = generate_integer(lvl)
+    score = 0
+    for i in range(10) :
+        x = generate_integer(lvl)
+        y = generate_integer(lvl)
     ...
 
 

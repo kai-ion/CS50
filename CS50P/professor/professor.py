@@ -19,6 +19,7 @@ def main():
                         print("EEE")
                         counter += 1
                     else :
+                        score += 1
                         break
 
 

@@ -3,11 +3,14 @@ import inflect
 p = inflect.engine()
 
 def main() :
-    output = "Liesl"
+    namesList = 
     while True:
         try :
             name = input("Name: ")
             output = p.join(name)
+
+            nameList.append(name)
+
         except EOFError:
             print()
             break

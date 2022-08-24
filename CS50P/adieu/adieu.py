@@ -1,7 +1,7 @@
 import inflect
 
 def main() :
-    output = ["Liesl"]
+    output = "Liesl"
     while True:
         try :
             name = input("Name: ")
@@ -10,7 +10,7 @@ def main() :
             print()
             break
 
-    print(f"Adieu, adieu, to ")
+    print(f"Adieu, adieu, to {output}")
 
     ...
 

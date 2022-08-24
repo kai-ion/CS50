@@ -14,11 +14,12 @@ def main():
 
                 ans = input(f"{x} + {y} = ")
 
-
-                while count < 3
-                if ans != x + y :
-                    print(EEE)
                 counter = 0
+                while counter < 3 :
+                    if ans != x + y :
+                        print("EEE")
+                        counter++
+
 
             except ValueError:
                 pass

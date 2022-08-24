@@ -3,16 +3,16 @@ import inflect
 p = inflect.engine()
 
 def main() :
-    namesList = 
+    nameList = ["Liesl"]
     while True:
         try :
             name = input("Name: ")
-            output = p.join(name)
 
-            nameList.append(name)
+            output = p.join(nameList)
 
         except EOFError:
             print()
+            nameList.append(name)
             break
 
     print(f"Adieu, adieu, to {output}")

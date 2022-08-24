@@ -3,7 +3,7 @@ import inflect
 p = inflect.engine()
 
 def main() :
-    nameList = ["Liesl"]
+    nameList = []
     while True:
         try :
             name = input("Name: ")

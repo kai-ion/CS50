@@ -10,7 +10,6 @@ def main() :
 
     try:
         n = float(sys.argv[1])
-
         ...
     except ValueError:
         sys.exit("Command-line argument is not a number")
@@ -21,7 +20,7 @@ def main() :
         print(json.dumps(response.json(), indent=2))
         ...
     except requests.RequestException:
-        sys.exit
+        sys.exit("Request Error")
         ...
     ...
 

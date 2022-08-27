@@ -17,7 +17,9 @@ def main() :
 
     try:
         response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-        print(json.dumps(response.json(), indent=2))
+        #print(json.dumps(response.json(), indent=2))
+        rate = response["bpi"]["USD"]["rate"]
+        print(float(rate))
         ...
     except requests.RequestException:
         sys.exit("Request Error")

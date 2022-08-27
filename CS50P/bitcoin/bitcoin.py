@@ -10,14 +10,18 @@ def main() :
 
     try:
         n = float(sys.argv[1])
+
+        ...
+    except ValueError:
+        sys.exit("Command-line argument is not a number")
+        ...
+
+    try:
         response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
         print(json.dumps(response.json(), indent=2))
         ...
-    except requests.RequestException or ValueError:
-        if ValueError :
-            sys.exit("Command-line argument is not a number")
-        else :
-            sys.exit("Request Error")
+    except requests.RequestException:
+        sys.exit
         ...
     ...
 

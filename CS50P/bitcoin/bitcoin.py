@@ -10,7 +10,11 @@ def main() :
     try:
         n = float(sys.argv[2])
         ...
-    except requests.RequestException:
+    except (requests.RequestException or ValueError):
+        if ValueError :
+            sys.exit("Command-line argument is not a number")
+        else :
+            sys.exit("Request Error")
         ...
     ...
 

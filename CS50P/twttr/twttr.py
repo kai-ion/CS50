@@ -16,18 +16,20 @@ main()
 def main() :
     str = input("Input: ")
 
-    for i in str :
+    word = shorten(str)
 
-        if i.upper() in ['A', 'E', 'I', 'O', 'U'] :
-            print('', end="")
-
-        else :
-            print(i, end="")
-    print()
+    print(f"Output: {word}")
     ...
 
 
 def shorten(word):
+    str = ""
+    for i in word :
+
+        if not i.upper() in ['A', 'E', 'I', 'O', 'U'] :
+            str += i
+
+    return str
     ...
 
 if __name__ == "__main__":

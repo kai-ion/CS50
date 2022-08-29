@@ -1,4 +1,4 @@
-```def main () :
+'''def main () :
     str = input("Input: ")
 
     for i in str :
@@ -10,4 +10,11 @@
             print(i, end="")
     print()
 
-main()```
+main()
+'''
+
+def main() :
+    ...
+
+if __name__ == "__main__":
+    main()

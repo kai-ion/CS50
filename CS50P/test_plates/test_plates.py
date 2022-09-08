@@ -1,9 +1,12 @@
 from plates import is_valid
 
 def main() :
+    test_return()
     is_valid_length()
     is_valid_start()
 
+def test_return() :
+    assert is_valid("AA") == True
 
 def is_valid_length() :
     assert is_valid("AA") == True
@@ -16,5 +19,5 @@ def is_valid_start() :
     assert is_valid("1A") == False
     assert is_valid("A1") == False
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
     main()

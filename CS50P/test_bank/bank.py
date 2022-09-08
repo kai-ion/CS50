@@ -8,11 +8,12 @@ def main() :
 def value(greeting) :
 
     greeting = greeting.strip().lower()
+
     if "hello" in greeting :
-        return 0
+        return int(0)
     elif greeting[0] == 'h' :
-        return 20
+        return int(20)
     else :
-        return 100
+        return int(100)
 
 main()

@@ -1,3 +1,5 @@
+from bank import value
+
 def main() :
     ...
 

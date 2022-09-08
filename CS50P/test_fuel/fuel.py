@@ -45,7 +45,7 @@ def convert(fraction):
                 fraction = input("Fraction: ")
                 pass
         except (ValueError, ZeroDivisionError):
-            pass
+            raise
     ...
 
 

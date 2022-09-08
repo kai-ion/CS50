@@ -4,6 +4,7 @@ import pytest
 def main () :
     test_input()
     test_zero_division()
+    test_value()
     ...
 
 def test_input() :
@@ -14,6 +15,10 @@ def test_input() :
 def test_zero_division() :
     with pytest.raises(ZeroDivisionError) :
         convert("1/0")
+
+def test_value() :
+    with pytest.raises(ValueError) :
+        convert("cat/dog")
 
 if __name__ == "__main__" :
     main()

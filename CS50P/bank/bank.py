@@ -1,11 +1,16 @@
 def main() :
     str = input("Greeting: ").strip().lower()
 
+    output = value(str)
+
+    print(f"${output}")
+
+def value(greeting) :
     if "hello" in str :
-        print("$0")
-    elif str[0] == 'h' :
-        print("$20")
+        return 0
+    elif greeting[0] == 'h' :
+        return 20
     else :
-        print("$100")
+        return 100
 
 main()

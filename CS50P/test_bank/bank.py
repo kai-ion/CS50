@@ -1,9 +1,9 @@
 def main() :
     str = input("Greeting: ")
 
-    output = value(str)
+    greeting = value(str)
 
-    print(f"${output}")
+    print(f"${greeting}")
 
 def value(greeting) :
 
@@ -16,4 +16,5 @@ def value(greeting) :
     else :
         return int(100)
 
-main()
+if __name__ == "__main__" :
+    main()

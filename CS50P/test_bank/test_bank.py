@@ -18,6 +18,8 @@ def test_return_20():
     ...
 
 def test_return_100():
+    assert value('morning') == 100
+    assert value("whats up") == 100
     ...
 
 if __name__ == "__main__" :

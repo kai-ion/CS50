@@ -30,7 +30,7 @@ def is_valid(s):
             else :
                 break
         i += 1
-        
+
 
     for letter in s :
         if letter in ['.', ' ', '?', '!'] :
@@ -39,5 +39,6 @@ def is_valid(s):
     #   return False
 
     return True
-
-main()
+    
+if __name__ == "__main__":
+    main()

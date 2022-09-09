@@ -5,7 +5,7 @@ def main() :
     check_command_line_arg()
 
     with open(sys.argv[1]) as table:
-        print(tabulate(table))
+        print(tabulate.tabulate(table))
     ...
 
 def check_command_line_arg() :
@@ -14,7 +14,7 @@ def check_command_line_arg() :
     elif len(sys.argv) > 2 :
         sys.exit("Too many command-line arguments")
 
-    if ".py" not in sys.argv[1] :
+    if ".csv" not in sys.argv[1] :
         sys.exit("Not a Python file")
 
 if __name__ == "__main__" :

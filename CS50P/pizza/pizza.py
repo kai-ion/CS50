@@ -4,8 +4,8 @@ import tabulate
 def main() :
     check_command_line_arg()
 
-    with open("regular.csv") as file:
-        for 
+    with open("regular.csv") as table:
+        print(tabulate(table))
     ...
 
 def check_command_line_arg() :

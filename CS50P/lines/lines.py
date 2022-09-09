@@ -10,8 +10,12 @@ def main() :
     except FileNotFoundError:
         sys.exit("File does not exist")
 
+    count = 0
     for line in lines:
-        check_line_isComment_isSpace(line)
+        if check_line_isComment_isSpace(line) == False:
+            count += 1
+    print(count)
+
     ...
 
 def check_command_line_arg() :
@@ -24,7 +28,13 @@ def check_command_line_arg() :
         sys.exit("Not a Python file")
 
 def check_line_isComment_isSpace(line) :
-    
+    if line.isspace() :
+        return True
+    elif line.lstrip().startswith("#"):
+        return True
+    else :
+        return False
+
     ...
 
 if __name__ == "__main__" :

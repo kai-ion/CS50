@@ -5,7 +5,7 @@ def main() :
     check_command_line_arg()
 
     with open(sys.argv[1]) as table:
-        print(tabulate.tabulate(table))
+        print(tabulate.tabulate(table, headers = "firstrow"))
     ...
 
 def check_command_line_arg() :

@@ -24,7 +24,7 @@ def check_command_line_arg() :
         sys.exit("Not a Python file")
 
 def check_line_isComment_isSpace(line) :
-
+    
     ...
 
 if __name__ == "__main__" :

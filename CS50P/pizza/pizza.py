@@ -1,12 +1,14 @@
 import sys
+import csv
 import tabulate
 
 def main() :
     check_command_line_arg()
 
     try :
-        with open(sys.argv[1]) as table:
-            print(tabulate.tabulate(table, headers = "firstrow", tablefmt="github"))
+        with open(sys.argv[1], "r") as table:
+            reader = csv.reader(table)
+            print(tabulate.tabulate(reader, headers = "firstrow", tablefmt="grid"))
     except FileNotFoundError:
         sys.exit("File does not exist")
 

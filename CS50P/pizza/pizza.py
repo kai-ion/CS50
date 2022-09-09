@@ -4,8 +4,12 @@ import tabulate
 def main() :
     check_command_line_arg()
 
-    with open(sys.argv[1]) as table:
-        print(tabulate.tabulate(table, headers = "firstrow", tablefmt="github"))
+    try :
+        with open(sys.argv[1]) as table:
+            print(tabulate.tabulate(table, headers = "firstrow", tablefmt="github"))
+    except FileNotFoundError:
+        sys.exit("File does not exist")
+
     ...
 
 def check_command_line_arg() :

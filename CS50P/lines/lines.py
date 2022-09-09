@@ -9,6 +9,9 @@ def main() :
             lines = file.readlines()
     except FileNotFoundError:
         sys.exit("File does not exist")
+
+    for line in lines:
+        check_line_isComment_isSpace(line)
     ...
 
 def check_command_line_arg() :
@@ -19,6 +22,9 @@ def check_command_line_arg() :
 
     if ".py" not in sys.argv[1] :
         sys.exit("Not a Python file")
+
+def check_line_isComment_isSpace(line) :
+
     ...
 
 if __name__ == "__main__" :

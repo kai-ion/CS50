@@ -8,6 +8,9 @@ def main() :
 
     if ".py" not in sys.argv[1] :
         sys.exit("Not a Python file")
+
+    with open(sys.argv[1], "r") as file :
+        lines = file.readlines()
     ...
 
 if __name__ == "__main__" :

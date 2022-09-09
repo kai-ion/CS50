@@ -4,7 +4,7 @@ import tabulate
 def main() :
     check_command_line_arg()
 
-    with open("regular.csv") as table:
+    with open(sys.argv[1]) as table:
         print(tabulate(table))
     ...
 

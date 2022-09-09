@@ -13,7 +13,7 @@ def main() :
         with open(sys.argv[1], "r") as file :
             lines = file.readlines()
     except FileNotFoundError:
-        sys.exit()
+        sys.exit("File does not exist")
     ...
 
 if __name__ == "__main__" :

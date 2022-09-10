@@ -9,13 +9,13 @@ def main() :
 
     try :
         with open(sys.argv[1], "r") as table:
-            reader = csv.reader(table)
+            reader = csv.DictReader(table)
             for row in reader :
+                nameSplit = row["name"].split(",")
+                output.append({"firstName" : nameSplit[1], "lastName" : nameSplit[0], "house" : row["house"]})
 
-                print(row)
-                output.append({"name" : row[0], "house" : row[1]})
-            print(output)
-
+        for student in sorted(output, key=lambda student: student["lastName"]):
+            print(f"{student['lastName']} {student['firstName']}is in {student['house']}")
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")

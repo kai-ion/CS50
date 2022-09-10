@@ -2,6 +2,8 @@ import sys
 import csv
 import tabulate
 
+output = []
+
 def main() :
     check_command_line_arg()
 
@@ -9,8 +11,9 @@ def main() :
         with open(sys.argv[1], "r") as table:
             reader = csv.reader(table)
             for row in reader :
-                
+
                 print(row)
+                output.append{}
 
         ...
     except FileNotFoundError:

@@ -23,6 +23,7 @@ def main() :
     with open(sys.argv[2], "w") as file:
         writer = csv.DictWriter(file, fieldnames = ["first name", "last name", "house"])
         for student in sorted(output, key=lambda student: student["lastName"]):
+            writer.writerow({"first name" : student['firstName'], "last name" : student['lastName'], "house" : student['house']})
     ...
 
 

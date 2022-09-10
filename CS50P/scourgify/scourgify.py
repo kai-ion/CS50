@@ -19,6 +19,10 @@ def main() :
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
+
+    with open(sys.argv[2], "w") as file:
+        writer = csv.DictWriter(file, fieldnames = ["first name", "last name", "house"])
+        for name in sor
     ...
 
 

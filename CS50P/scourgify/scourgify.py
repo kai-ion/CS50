@@ -1,11 +1,12 @@
 def main() :
+    check_command_line_arg()
     ...
 
 
 def check_command_line_arg() :
-    if len(sys.argv) < 2 :
+    if len(sys.argv) < 3 :
         sys.exit("Too few command-line arguments")
-    elif len(sys.argv) > 2 :
+    elif len(sys.argv) > 3 :
         sys.exit("Too many command-line arguments")
 
     if ".py" not in sys.argv[1] :

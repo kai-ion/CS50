@@ -1,6 +1,5 @@
 import sys
 import csv
-import tabulate
 
 output = []
 
@@ -24,7 +23,7 @@ def main() :
         writer = csv.DictWriter(file, fieldnames = ["first name", "last name", "house"])
         writer.writerow({"first name" : "first", "last name" : 'last', "house" : 'house'})
         for student in output:
-            writer.writerow({"first name" : student['firstName'], "last name" : student['lastName'], "house" : student['house']})
+            writer.writerow({"first name" : student['firstName'], "last name" :student['lastName'], "house" :student['house']})
     ...
 
 

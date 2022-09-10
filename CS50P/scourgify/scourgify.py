@@ -15,14 +15,14 @@ def main() :
                 output.append({"firstName" : nameSplit[1], "lastName" : nameSplit[0], "house" : row["house"]})
 
         for student in sorted(output, key=lambda student: student["lastName"]):
-            print(f"{student['lastName']} {student['firstName']}is in {student['house']}")
+            print(f"{student['firstName']} {student['lastName']}is in {student['house']}")
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
 
     with open(sys.argv[2], "w") as file:
         writer = csv.DictWriter(file, fieldnames = ["first name", "last name", "house"])
-        for name in sor
+        for student in sorted(output, key=lambda student: student["lastName"]):
     ...
 
 

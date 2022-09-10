@@ -1,5 +1,6 @@
 import sys
 import csv
+import tabulate
 
 def main() :
     check_command_line_arg()
@@ -7,6 +8,7 @@ def main() :
     try :
         with open(sys.argv[1], "r") as table:
             reader = csv.reader(table)
+            print(tabulate.tabulate(reader, headers = "firstrow", tablefmt="grid"))
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")

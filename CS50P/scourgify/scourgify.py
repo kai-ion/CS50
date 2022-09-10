@@ -1,12 +1,15 @@
 import sys
+import csv
 
 def main() :
     check_command_line_arg()
 
     try :
+        with open(sys.argv[1], "r") as table:
+            reader = csv.reader(table)
         ...
     except FileNotFoundError:
-        sys.exit(f"could not read {sys.argv[1]}")
+        sys.exit(f"Could not read {sys.argv[1]}")
     ...
 
 

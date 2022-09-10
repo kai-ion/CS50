@@ -14,8 +14,8 @@ def main() :
                 nameSplit = row["name"].split(",")
                 output.append({"firstName" : nameSplit[1], "lastName" : nameSplit[0], "house" : row["house"]})
 
-        for student in sorted(output, key=lambda student: student["lastName"]):
-            print(f"{student['firstName']} {student['lastName']}is in {student['house']}")
+        #for student in sorted(output, key=lambda student: student["lastName"]):
+            #print(f"{student['firstName']} {student['lastName']}is in {student['house']}")
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")

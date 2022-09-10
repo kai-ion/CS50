@@ -13,7 +13,8 @@ def main() :
             for row in reader :
 
                 print(row)
-                output.append{}
+                output.append({"name" : row[0], "house" : row[1]})
+            print(output)
 
         ...
     except FileNotFoundError:

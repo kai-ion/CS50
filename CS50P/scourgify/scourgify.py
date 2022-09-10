@@ -8,6 +8,8 @@ def main() :
     try :
         with open(sys.argv[1], "r") as table:
             reader = csv.reader(table)
+            for row in table :
+                print(row)
             print(tabulate.tabulate(reader, headers = "firstrow", tablefmt="grid"))
         ...
     except FileNotFoundError:

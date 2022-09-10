@@ -9,8 +9,9 @@ def main() :
         with open(sys.argv[1], "r") as table:
             reader = csv.reader(table)
             for row in table :
+                name, house = reader
                 print(row)
-            print(tabulate.tabulate(reader, headers = "firstrow", tablefmt="grid"))
+
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")

@@ -8,8 +8,8 @@ def main() :
     try :
         with open(sys.argv[1], "r") as table:
             reader = csv.reader(table)
-            for row in table :
-                name, house = reader
+            for row in reader :
+                
                 print(row)
 
         ...

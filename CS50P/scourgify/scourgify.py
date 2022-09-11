@@ -11,7 +11,7 @@ def main() :
             reader = csv.DictReader(table)
             for row in reader :
                 nameSplit = row["name"].split(",")
-                output.append({"firstName" : nameSplit[1], "lastName" : nameSplit[0], "house" : row["house"]})
+                output.append({"firstName" : nameSplit[1].lstrip(), "lastName" : nameSplit[0], "house" : row["house"]})
 
         #for student in sorted(output, key=lambda student: student["lastName"]):
             #print(f"{student['firstName']} {student['lastName']}is in {student['house']}")

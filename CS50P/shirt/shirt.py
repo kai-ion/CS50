@@ -4,6 +4,11 @@ import PIL
 
 def main() :
     check_command_line_arg()
+
+    try :
+        ...
+    except FileNotFoundError:
+        sys.exit(f"Could not read {sys.argv[1]}")
     ...
 
 def check_command_line_arg() :

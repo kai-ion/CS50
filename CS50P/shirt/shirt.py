@@ -1,7 +1,7 @@
 import sys
 
 def main() :
-    check_command_line_arg() 
+    check_command_line_arg()
     ...
 
 def check_command_line_arg() :
@@ -12,6 +12,11 @@ def check_command_line_arg() :
 
     if ".jpg" or "png" not in sys.argv[1] or ".csv" not in sys.argv[2]:
         sys.exit("Not a CSV file")
+
+def check_extension(file) :
+    if file in [".jpg", ".jepg", ".png"]:
+        return True
+    return False
 
 if __name__ == "__main__" :
     main()

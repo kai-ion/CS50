@@ -6,7 +6,7 @@ def main() :
     check_command_line_arg()
 
     try :
-        shirt = Image.open(sys.argv[1])
+        image = Image.open(sys.argv[1])
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
@@ -14,6 +14,12 @@ def main() :
     shirt = Image.open("shirt.png")
 
     size = shirt.size
+
+    photo = ImageOps.fit(image, size)
+
+    photo.paste(shirt, shirt)
+
+    photo.save(sys.argv[2])
     ...
 
 def check_command_line_arg() :

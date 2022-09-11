@@ -10,8 +10,15 @@ def check_command_line_arg() :
     elif len(sys.argv) > 3 :
         sys.exit("Too many command-line arguments")
 
-    if ".jpg" or "png" not in sys.argv[1] or ".csv" not in sys.argv[2]:
-        sys.exit("Not a CSV file")
+    file1 = splitext(sys.argv[1])
+    file2 = splitext(sys.argv[2])
+
+    if check_extension(file1) == False:
+        sys.exit("Invalid input")
+    if check_extension(file2) == False:
+        sys.exit("Invalid input")
+
+    if file1
 
 def check_extension(file) :
     if file in [".jpg", ".jepg", ".png"]:

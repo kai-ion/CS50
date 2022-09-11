@@ -1,4 +1,5 @@
 import sys
+import os
 
 def main() :
     check_command_line_arg()
@@ -10,8 +11,8 @@ def check_command_line_arg() :
     elif len(sys.argv) > 3 :
         sys.exit("Too many command-line arguments")
 
-    file1 = splitext(sys.argv[1])
-    file2 = splitext(sys.argv[2])
+    file1 = os.path.splitext(sys.argv[1])
+    file2 = os.path.splitext(sys.argv[2])
 
     print(file1)
     if check_extension(file1[1]) == False:

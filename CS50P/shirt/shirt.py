@@ -1,5 +1,6 @@
 import sys
 import os
+import PIL
 
 def main() :
     check_command_line_arg()
@@ -14,7 +15,6 @@ def check_command_line_arg() :
     file1 = os.path.splitext(sys.argv[1])
     file2 = os.path.splitext(sys.argv[2])
 
-    print(file1)
     if check_extension(file1[1]) == False:
         sys.exit("Invalid input")
     if check_extension(file2[1]) == False:

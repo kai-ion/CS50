@@ -1,6 +1,6 @@
 import sys
 import os
-from PIL import Image
+from PIL import Image, ImageOps
 
 def main() :
     check_command_line_arg()
@@ -10,6 +10,10 @@ def main() :
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")
+
+    shirt = Image.open("shirt.png")
+
+    size = shirt.size
     ...
 
 def check_command_line_arg() :

@@ -6,6 +6,7 @@ def main() :
     check_command_line_arg()
 
     try :
+        shirt = PIL.Image.open(sys.argv[1])
         ...
     except FileNotFoundError:
         sys.exit(f"Could not read {sys.argv[1]}")

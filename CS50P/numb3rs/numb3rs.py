@@ -6,6 +6,7 @@ def main() :
     ...
 
 def validate(ip):
+    if re.search("^$") :
     ...
 
 if __name__ == "__main__" :

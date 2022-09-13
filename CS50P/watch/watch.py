@@ -7,6 +7,9 @@ def main():
 
 
 def parse(s):
+    if re.search(r"",s) :
+        if match := re.search("", s) :
+            url = match.groups()
     ...
 
 

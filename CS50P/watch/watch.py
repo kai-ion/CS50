@@ -8,8 +8,10 @@ def main():
 
 def parse(s):
     if re.search(r"",s) :
-        if match := re.search("", s) :
-            url = match.groups()
+        if match := re.search(r"", s) :
+            url = match.group(3)
+
+            return "https://youtu.be/" + url
     ...
 
 

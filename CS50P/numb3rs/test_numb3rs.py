@@ -6,6 +6,8 @@ def main() :
     ...
 
 def test_format() :
+    assert numb3rs.validate("1.2.3.4") == True
+
     ...
 
 def test_range() :

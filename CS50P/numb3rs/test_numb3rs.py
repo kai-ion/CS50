@@ -17,6 +17,8 @@ def test_range() :
     assert numb3rs.validate(r"1.2.3.255") == True
     assert numb3rs.validate(r"1.2.3.1000") == False
     assert numb3rs.validate(r"512.2.3.255") == False
+    assert numb3rs.validate(r"51.520.3.255") == False
+    assert numb3rs.validate(r"51.2.300.255") == False
 
     ...
 

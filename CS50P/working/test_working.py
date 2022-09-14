@@ -10,7 +10,7 @@ def main() :
 
 def test_format() :
     with pytest.raises(ValueError) :
-        convert('9 AM - 9 PM')
+        convert('9 AM - 5 PM')
     ...
 
 def test_time() :
@@ -26,7 +26,7 @@ def test_hour() :
 
 def test_minute() :
     with pytest.raises(ValueError) :
-        convert('9:60 AM to 9:60 PM')
+        convert('9:60 AM to 5:60 PM')
     ...
 
 if __name__ == "__main__" :

@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    regex = "(([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M)"
+    regex = "([1-9]|1[0-2])(?::([0-5][0-9]))? ([AP]M)"
     if match := re.search(r"^" + regex + " to " + regex + "$", s) :
  #       if int(match.group(1)) > 12 or int(match.group(5)) > 12 :
    #         raise ValueError

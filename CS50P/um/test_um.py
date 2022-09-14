@@ -1,18 +1,25 @@
-import re
-import sys
+from um import count
 
 
 def main():
-    print(count(input("Text: ")))
+    test_upperCase()
+    test_word()
+    test_space()
 
-
-def count(s):
-    match = re.findall(r"\b\W*um\W", s, re.IGNORECASE)
-    return len(match)
+def test_upperCase() :
+    assert count("Um, thanks for the album.") == 1
+    assert count("Um, thanks, um...") == 2
     ...
 
+def test_word() :
+    assert count("yuummi") == 0
+    ...
 
-...
+def test_space() :
+    assert count("um?") == 1
+    assert count("hi um okay") == 1
+    ...
+
 
 
 if __name__ == "__main__":

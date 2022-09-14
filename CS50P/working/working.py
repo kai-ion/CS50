@@ -7,6 +7,11 @@ def main():
 
 
 def convert(s):
+    if match := re.search(r"", s, re.IGNORECASE) :
+        return match.groups()
+    else :
+        return ValueError
+        ...
     ...
 
 

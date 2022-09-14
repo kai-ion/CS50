@@ -21,7 +21,7 @@ def test_time() :
 
 def test_hour() :
     with pytest.raises(ValueError) :
-        convert('9 AM - 17 PM')
+        convert('13 PM - 17 PM')
     ...
 
 def test_minute() :

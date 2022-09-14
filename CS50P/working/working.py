@@ -17,7 +17,7 @@ def convert(s):
         end = time_format(match.group(4), match.group(5), match.group(6))
         return start + ' to ' + end
     else :
-        return ValueError
+        raise ValueError
         ...
     ...
 

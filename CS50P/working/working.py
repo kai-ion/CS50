@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    if match := re.search(r"", s, re.IGNORECASE) :
+    if match := re.search(r"/^(([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M)$/gm", s, re.IGNORECASE) :
         return match.groups()
     else :
         return ValueError

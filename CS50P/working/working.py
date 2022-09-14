@@ -13,7 +13,7 @@ def convert(s):
         strs = match.groups()
         start = time_format(match.group(2), match.group(3), match.group(4))
         end = time_format(match.group(6), match.group(7), match.group(8))
-        return start + 'to' + end
+        return start + ' to ' + end
     else :
         return ValueError
         ...

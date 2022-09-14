@@ -11,6 +11,8 @@ def main() :
 def test_format() :
     with pytest.raises(ValueError) :
         convert('9 AM - 5 PM')
+    with pytest.raises(ValueError) :
+        convert('9AM to 5PM')
     ...
 
 def test_time() :

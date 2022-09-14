@@ -34,9 +34,9 @@ def time_format(hour, minute, amPM) :
 
     if minute == None:
         newMinute = ':00'
-        newTime = newHour + newMinute
+        newTime = f"{newHour:02}" + newMinute
     else:
-        newTime = newHour + ":" + minute
+        newTime = f"{newHour:02}" + ":" + minute
 
     return newTime
 

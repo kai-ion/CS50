@@ -30,7 +30,7 @@ def time_format(hour, minute, amPM) :
         if int(hour) == 12:
             newHour = 0
         else:
-            new_hour = int(hour)
+            newHour = int(hour)
 
     if minute == None:
         newMinute = ':00'

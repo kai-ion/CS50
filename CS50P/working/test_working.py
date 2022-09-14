@@ -21,12 +21,12 @@ def test_time() :
 
 def test_hour() :
     with pytest.raises(ValueError) :
-        convert('13 PM - 17 PM')
+        convert('13 PM to 17 PM')
     ...
 
 def test_minute() :
     with pytest.raises(ValueError) :
-        convert('9:60 AM - 9:60 PM')
+        convert('9:60 AM to 9:60 PM')
     ...
 
 if __name__ == "__main__" :

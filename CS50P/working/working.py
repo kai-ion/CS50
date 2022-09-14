@@ -10,8 +10,8 @@ def convert(s):
     regex = "([0-9][0-2]*):*([0-5][0-9])* ([A-P]M)"
     if match := re.search(r"^" + regex + " to " + regex + "$", s) :
         strs = match.groups()
- #       if int(match.group(1)) > 12 or int(match.group(5)) > 12 :
-   #         raise ValueError
+        if int(match.group(1)) > 12 or int(match.group(5)) > 12 :
+            raise ValueError
 
         start = time_format(match.group(1), match.group(2), match.group(3))
         end = time_format(match.group(4), match.group(5), match.group(6))

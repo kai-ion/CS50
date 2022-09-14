@@ -10,8 +10,8 @@ def convert(s):
     if match := re.search(r"^(([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M) to (([0-9][0-2]*):*([0-5][0-9])*) ([A-P]M)$", s) :
  #       if int(match.group(1)) > 12 or int(match.group(5)) > 12 :
    #         raise ValueError
-        start = time_format(match.group[1], match.group[2], match.group[3])
-        end = time_format(match.group[5], match.group[6], match.group[7])
+        start = time_format(match.group(1), match.group(2), match.group(3))
+        end = time_format(match.group(5), match.group(6), match.group(7))
         return start + 'to' + end
     else :
         return ValueError

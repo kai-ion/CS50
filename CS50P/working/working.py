@@ -12,8 +12,8 @@ def convert(s):
  #       if int(match.group(1)) > 12 or int(match.group(5)) > 12 :
    #         raise ValueError
         strs = match.groups()
-        start = time_format(match.group(2), match.group(3), match.group(4))
-        end = time_format(match.group(6), match.group(7), match.group(8))
+        start = time_format(match.group(1), match.group(2), match.group(3))
+        end = time_format(match.group(4), match.group(5), match.group(6))
         return start + ' to ' + end
     else :
         return ValueError

@@ -5,6 +5,17 @@ def main() :
     ...
 
 def validate(s) :
+    try:
+        email_address = validators.email(s)
+        # Will raise an EmptyValueError
+    except errors.EmptyValueError:
+        # Handling logic goes here
+        return "Invalid"
+        ...
+    except errors.InvalidEmailError:
+        # More handlign logic goes here
+        return "Invalid"
+        ...
     ...
 
 if __name__ == "__main__" :

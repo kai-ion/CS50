@@ -11,11 +11,13 @@ def validate(s) :
     except errors.EmptyValueError:
         # Handling logic goes here
         return "Invalid"
-        ...
+
     except errors.InvalidEmailError:
         # More handlign logic goes here
         return "Invalid"
-        ...
+
+    return "Valid"
+
     ...
 
 if __name__ == "__main__" :

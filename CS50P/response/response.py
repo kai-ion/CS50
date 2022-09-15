@@ -1,7 +1,9 @@
 from validator_collection import validators, checkers, errors
 
 def main() :
-    mail = validate(input("What's your email address?"))
+    mail = validate(input("What's your email address? "))
+
+    print(mail)
     ...
 
 def validate(s) :
